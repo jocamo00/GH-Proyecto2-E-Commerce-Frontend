@@ -1,0 +1,15 @@
+/****** COMPONENTE HEADER *****/
+
+/* Cabecera */
+.container-cabecera {
+    background-color: rgb(57,129,250);
+    padding: 1.5rem;
+}
+
+.txt-encabezado {
+    color: rgb(255, 255, 255);
+}
+/* Fin cabecera */
+
+
+/****** FIN COMPONENTE HEADER *****/
