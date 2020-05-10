@@ -3,7 +3,8 @@ import Header from './components/Header';
 //import Login from './components/Login';
 //import SignUp from './components/SignUp';
 //import NewProducts from './components/NewProducts';
-import SearchResults from './components/SearchResults';
+//import SearchResults from './components/SearchResults';
+import ProductDetail from './components/ProductDetail';
 import Footer from './components/Footer';
 
 
@@ -16,7 +17,8 @@ function App() {
       {/*<NewProducts />*/}
       {/*<Login />*/}
       {/*<SignUp />*/}
-      <SearchResults />
+      {/*<SearchResults />*/}.
+      <ProductDetail />
       <Footer />
     </Fragment>
   );
