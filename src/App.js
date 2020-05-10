@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Header from './components/Header';
 import NewProducts from './components/NewProducts';
+import Footer from './components/Footer';
 
 
 
@@ -9,7 +10,8 @@ function App() {
 
     <Fragment>
       <Header />
-      <NewProducts />
+      {/*<NewProducts />*/}
+      <Footer />
     </Fragment>
   );
 }

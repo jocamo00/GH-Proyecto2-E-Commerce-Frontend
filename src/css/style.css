@@ -1,87 +1,139 @@
 /****** COMPONENTE HEADER *****/
-
 /* Cabecera */
 .container-cabecera {
-    background-color: rgb(57,129,250);
-    padding: 1.5rem;
+    background-color  :rgb(57,129,250);
+             padding  :  1.5rem;
 }
 
 .txt-encabezado {
-    color: rgb(255, 255, 255);
+    color  :rgb(255, 255, 255);
 }
 /* Fin cabecera */
 
 .carousel-inner {
-    display: flex;
+    display  :  flex;
 }
-
 /****** FIN COMPONENTE HEADER *****/
 
 
-/****** COMPONENTE NEWPRODUCTS *****/
 
+/****** COMPONENTE NEWPRODUCTS *****/
 /* contenido productos*/
 .contenedor-productos {
-    margin: 0;
-    display: flex;
+     margin  :  0;
+    display  :  flex;
 }
 
 .txt-seccion-productos {
-    margin-top: 5rem;
-    font-size: 6vw;
+    margin-top  :  5rem;
+     font-size  :  6vw;
 }
 /* Fin contenido productos*/
 
 /* Card producto */
 .container-producto {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    padding-bottom: 1rem;
+           display  :  flex;
+    flex-direction  :  column;
+         flex-wrap  :  wrap;
+        margin-top  :  2rem;
+    padding-bottom  :  1rem;
 }
 
 .container-producto:hover{
-    border: 1px solid rgb(146,146,148);
-    box-shadow: 3px 3px 5px 6px rgb(146,146,148);
-    cursor: pointer;
+        border  :  1px solid rgb(146,146,148);
+    box-shadow  :  3px 3px 5px 6px rgb(146,146,148);
+        cursor  :  pointer;
 } 
 
 .contenedor-info {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+           display  :  flex;
+    flex-direction  :  column;
+         flex-wrap  :  wrap;
 }
 
 .contenedorMarca {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: rgb(146,146,148);
-    font-size: 1.7rem;
-    height: 2.2rem;
+            display  :  flex;
+    justify-content  :  center;
+          flex-wrap  :  wrap;
+              color  :rgb(146,146,148);
+          font-size  :  1.7rem;
+             height  :  2.2rem;
 }
 
 .contenedorProcesador {
-    display: flex;
-    justify-content: center;
-    color: rgb(146,146,148);
-    flex-wrap: wrap;
-    font-size: 1.1rem;
-    height: 2rem;
+            display  :  flex;
+    justify-content  :  center;
+              color  :rgb(146,146,148);
+          flex-wrap  :  wrap;
+          font-size  :  1.1rem;
+             height  :  2rem;
 }  
 
 .marca {
-    margin-right: 0.5rem;
+    margin-right  :  0.5rem;
 }
 
 .precio {
-    display: flex;
-    justify-content: center;
-    color: rgb(68, 68, 73);
-    font-size: 2rem;
-    height: 1.4rem;
+            display  :  flex;
+    justify-content  :  center;
+              color  :rgb(68, 68, 73);
+          font-size  :  2rem;
+             height  :  1.4rem;
 }
 /* Fin Card producto */
-
 /****** COMPONENTE NEWPRODUCTS *****/
+
+
+
+/****** COMPONENTE FOOTER *****/
+/* Footer */
+.container-footer {
+             display  :  flex;
+     justify-content  :  center;
+         align-items  :  center;
+    background-color  :rgb(38,38,38);
+               color  :rgb(255, 255, 255);
+              height  :  3rem;
+}
+/* Fin footer */
+
+/* Newsletter */
+.container-newsletter {
+    display: flex;
+    margin-top: 5rem;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(57,129,250);
+    height: 10rem;
+}
+
+.txt-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-newsletter {
+    display: flex;
+    justify-content: center;
+}
+
+.input-newsletter {
+    border-style: none;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(57,129,250);
+    width: 25rem;
+}
+
+.btn-newsletter {
+    border-style: none;
+    background-color: rgb(38,38,38);
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    margin-left: 0.5rem;
+}
+/* Fin newsletter */
+/****** FIN COMPONENTE FOOTER *****/
+
+
+
