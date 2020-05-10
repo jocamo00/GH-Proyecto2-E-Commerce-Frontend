@@ -16,7 +16,6 @@
 /****** FIN COMPONENTE HEADER *****/
 
 
-
 /****** COMPONENTE NEWPRODUCTS *****/
 /* contenido productos*/
 .contenedor-productos {
@@ -84,7 +83,6 @@
 /****** COMPONENTE NEWPRODUCTS *****/
 
 
-
 /****** COMPONENTE FOOTER *****/
 /* Footer */
 .container-footer {
@@ -95,27 +93,26 @@
                color  :rgb(255, 255, 255);
               height  :  3rem;
 }
-/* Fin footer */
 
 /* Newsletter */
 .container-newsletter {
-    display: flex;
-    margin-top: 5rem;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    background-color: rgb(57,129,250);
-    height: 10rem;
+             display  :  flex;
+          margin-top  :  5rem;
+         align-items  :  center;
+               color  :rgb(255, 255, 255);
+    background-color  :rgb(57,129,250);
+              height  :  10rem;
 }
 
 .txt-newsletter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+           display  :  flex;
+    flex-direction  :  column;
+       align-items  :  center;
 }
 
 .form-newsletter {
-    display: flex;
-    justify-content: center;
+            display  :  flex;
+    justify-content  :  center;
 }
 
 .input-newsletter {
@@ -126,46 +123,59 @@
 }
 
 .btn-newsletter {
-    border-style: none;
-    background-color: rgb(38,38,38);
-    color: rgb(255, 255, 255);
-    padding: 1rem;
-    margin-left: 0.5rem;
+        border-style  :  none;
+    background-color  :rgb(38,38,38);
+               color  :rgb(255, 255, 255);
+             padding  :  1rem;
+         margin-left  :  0.5rem;
 }
 /* Fin newsletter */
+/* Fin footer */
 /****** FIN COMPONENTE FOOTER *****/
-
 
 
 /****** COMPONENTE LOGIN Y COMPONENTE SIGN UP*****/
 /* Login y sign up*/
 .formulario {
-    height: 25rem;
-    padding-top: 12rem;
-    padding-bottom: 35rem;
+            height  :  25rem;
+       padding-top  :  12rem;
+    padding-bottom  :  35rem;
 }
 .form {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
-    text-align: center;
+         width  :  100%;
+     max-width  :  330px;
+       padding  :  15px;
+        margin  :  auto;
+    text-align  :  center;
 }
 
 .form input.form-control {
-    margin: 10px 0px;
+    margin  :  10px 0px;
 }
 
 .img-login {
-    width: 12rem;
+    width  :  12rem;
     
 }
 
 .btn-style {
-    width: 100%;
+    width  :  100%;
 }
 /* Fin login y sign up*/
 /****** FIN COMPONENTE LOGIN Y COMPONENTE SIGN UP*****/
 
 
+/****** COMPONENTE SEARCH RESULTS *****/
+/* Search products */
+.search-products {
+         margin-top  :  2.5rem;
+    justify-content  :  center;
+       margin-right  :  0px;
+        margin-left  :  0px;
+        align-items  :  center;
+}
+
+
+/* Fin search products */
+/****** COMPONENTE SEARCH RESULTS *****/
 
