@@ -1,4 +1,7 @@
 import React from 'react';
+import carousel01 from '../img/carousel01.jpg';
+import carousel02 from '../img/carousel02.jpg';
+import carousel03 from '../img/carousel03.jpg';
 import { Nav, Navbar, Carousel, Form, FormControl, Button } from 'react-bootstrap';
 
 
@@ -40,7 +43,7 @@ const Header = () => {
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="https://ld-magento.template-help.com/magento_58509/pub/media/wysiwyg/slide1.jpg"
+                    src={carousel01}
                     alt="First slide"
                     />
                     <Carousel.Caption>
@@ -51,7 +54,7 @@ const Header = () => {
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="https://ld-magento.template-help.com/magento_58509/pub/media/wysiwyg/slide2_1.jpg"
+                    src={carousel02}
                     alt="Third slide"
                     />
 
@@ -63,7 +66,7 @@ const Header = () => {
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="https://ld-magento.template-help.com/magento_58509/pub/media/wysiwyg/slide3.jpg"
+                    src={carousel03}
                     alt="Third slide"
                     />
 

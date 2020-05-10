@@ -137,3 +137,31 @@
 
 
 
+/****** COMPONENTE LOGIN *****/
+/* Login */
+.formulario {
+    height: 25rem;
+    padding-top: 12rem;
+    padding-bottom: 35rem;
+}
+.form {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+.form input.form-control {
+    margin: 10px 0px;
+}
+
+.img-login {
+    width: 12rem;
+    
+}
+/* Fin login */
+/****** FIN COMPONENTE LOGIN *****/
+
+
+
