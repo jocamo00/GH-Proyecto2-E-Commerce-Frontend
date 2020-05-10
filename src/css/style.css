@@ -137,8 +137,8 @@
 
 
 
-/****** COMPONENTE LOGIN *****/
-/* Login */
+/****** COMPONENTE LOGIN Y COMPONENTE SIGN UP*****/
+/* Login y sign up*/
 .formulario {
     height: 25rem;
     padding-top: 12rem;
@@ -160,8 +160,12 @@
     width: 12rem;
     
 }
-/* Fin login */
-/****** FIN COMPONENTE LOGIN *****/
+
+.btn-style {
+    width: 100%;
+}
+/* Fin login y sign up*/
+/****** FIN COMPONENTE LOGIN Y COMPONENTE SIGN UP*****/
 
 
 
