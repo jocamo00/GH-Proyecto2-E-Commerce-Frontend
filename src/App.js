@@ -7,7 +7,6 @@ import NewProducts from './components/NewProducts';
 import SearchResults from './components/SearchResults';
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
-import Categories from './components/Categories';
 //import Footer from './components/Footer';
 
 
@@ -23,7 +22,6 @@ function App() {
         <Route exact path="/search-results" component={SearchResults} />
         <Route exact path="/product-detail" component={ProductDetail} />
         <Route exact path="/cart" component={Cart} />
-        <Route exact path="/admin" component={Categories} />
       </Switch>
     </Router>
 
