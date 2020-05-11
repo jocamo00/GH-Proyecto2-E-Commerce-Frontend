@@ -269,6 +269,20 @@
 /****** FIN COMPONENTE CART *****/
 
 
+/****** COMPONENTE SIDEBAR *****/
+/* Sidebar */
+.layout-sidebar {
+    height: 100vh;
+    background-color: rgb(68, 68, 73);
+}
+
+.title-aside {
+    color: rgb(255, 255, 255);
+}
+/* Fin Sidebar */
+/****** FIN COMPONENTE SIDEBAR *****/
+
+
 
 
 
