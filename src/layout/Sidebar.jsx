@@ -1,5 +1,6 @@
 import React from 'react';
 import NewCategorie from '../components/categories/NewCategorie';
+import ListCategories from '../components/categories/ListCategories';
 
 
 const Sidebar = () => {
@@ -11,7 +12,8 @@ const Sidebar = () => {
             <NewCategorie />
 
             <div>
-                <h2>Productos</h2>
+                <h2>Categorias</h2>
+                <ListCategories />
             </div>
         </aside>
      );
