@@ -12,6 +12,7 @@ const Header = () => {
 
             <div className="container-cabecera">
                 <h1 className="txt-encabezado">ipcComponent</h1>
+                <p>Hola<span>Jose</span></p>
             </div>
 
             {/* Barra de navegación*/}
@@ -24,7 +25,7 @@ const Header = () => {
                     
                     </Nav>
                     <Nav>
-                    <Nav.Link href="#deets">More deets</Nav.Link>
+                    <Nav.Link href="#">close sesion</Nav.Link>
                     <Nav.Link eventKey={2} href="#memes">
                         Dank memes
                     </Nav.Link>
