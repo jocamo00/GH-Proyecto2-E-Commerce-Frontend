@@ -4,7 +4,8 @@ import Header from './components/Header';
 //import SignUp from './components/SignUp';
 //import NewProducts from './components/NewProducts';
 //import SearchResults from './components/SearchResults';
-import ProductDetail from './components/ProductDetail';
+//import ProductDetail from './components/ProductDetail';
+import Cart from './components/Cart';
 import Footer from './components/Footer';
 
 
@@ -17,8 +18,9 @@ function App() {
       {/*<NewProducts />*/}
       {/*<Login />*/}
       {/*<SignUp />*/}
-      {/*<SearchResults />*/}.
-      <ProductDetail />
+      {/*<SearchResults />*/}
+      {/*<ProductDetail />*/}
+      <Cart />
       <Footer />
     </Fragment>
   );

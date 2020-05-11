@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 const ProductDetail = () => {
     return ( 
 
-        <div className="container-fluid">
+        <div className="container-fluid container-product-detail">
             <div className="row container-card">
                 <img className="img col-12 col-md-6 col-lg-5" src="https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-caracteristicas.jpg" alt="" fluid/>
                 <div className="info col-12 col-md-6 col-lg-5">

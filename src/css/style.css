@@ -116,10 +116,10 @@
 }
 
 .input-newsletter {
-    border-style: none;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(57,129,250);
-    width: 25rem;
+        border-style  :  none;
+              border  :  1px solid rgb(255, 255, 255);
+    background-color  :rgb(57,129,250);
+               width  :  25rem;
 }
 
 .btn-newsletter {
@@ -175,51 +175,102 @@
         align-items  :  center;
 }
 /* Fin search products */
-/****** COMPONENTE SEARCH RESULTS *****/
+/****** FIN COMPONENTE SEARCH RESULTS *****/
 
+
+/****** COMPONENTE PRODUCT DETAIL *****/
+/* Product detail */
+.container-product-detail {
+    margin-top  :  2rem;
+}
 .container-card {
-    margin-top: 3rem;
-    justify-content: center;
-    margin: 0px;
+    justify-content  :  center;
+             margin  :  0px;
+        align-items  :  center;
 }
 
 .img {
-    padding: 0px;
+    padding  :  0px;
 }
 
 .title {
-    color: rgb(57,129,250);
-    margin-top: 2rem;
-    font-size: calc(1em + 1vw);
+         color:rgb(57,129,250);
+    margin-top:  2rem;
+     font-size:  calc(1em + 1vw);
 }
 
 .description {
-    color: rgb(68, 68, 73);
-    font-size: calc(0.6em + 0.6vw);
-    text-align: justify;
-    margin-top: 2rem;
+         color  :rgb(68, 68, 73);
+     font-size  :  calc(0.6em + 0.6vw);
+    text-align  :  justify;
+    margin-top  :  2rem;
 }
 
 .info-price {
-    margin-top: 2rem;
+    margin-top  :  2rem;
 }
 
 .price {
-    color: rgb(57,129,250);
-    font-size: calc(1.5em + 1.5vw);
+        color  :rgb(57,129,250);
+    font-size  :  calc(1.5em + 1.5vw);
 }
 
 .stock {
-    margin-top: -1rem;
-    color: rgb(57,129,250);
-    font-size: calc(0.7em + 0.7vw);
+    margin-top  :  -1rem;
+         color  :rgb(57,129,250);
+     font-size  :  calc(0.7em + 0.7vw);
 }
 
 .btn-buy {
-    justify-content: space-around;
-    margin-top: 3rem;
+    justify-content  :  space-around;
+         margin-top  :  3rem;
+}
+/* Fin product detail */
+/****** FIN COMPONENTE PRODUCT DETAIL *****/
+
+
+/****** COMPONENTE CART *****/
+/* Cart */
+.a {
+    background-color: thistle;
 }
 
+.product-cart {
+    display: flex;
+    margin-left: 0px;
+    background-color: tomato;
+}
+
+.product-ticket {
+    background-color: turquoise;
+}
+
+.img-cart {
+    background-color: yellow;
+}
+
+.title-cart {
+    margin-top: 5rem;
+    height: 8rem;
+    font-size  :  calc(0.7em + 0.7vw);
+    background-color: yellowgreen;
+}
+
+.price-cart {
+    d
+    background-color: wheat;
+}
+
+.btn-delete {
+    margin-top: 5rem;
+    height: 2rem;
+    background-color: teal;
+}
+
+
+
+/* Fin cart */
+/****** FIN COMPONENTE CART *****/
 
 
 
@@ -232,16 +283,19 @@
     .container-card {
         flex-direction: column;
     }
+
 }
 
 /*Medium devices (tablets, 768px and down)*/
 @media (max-width: 768px) {
 
+    
 }
 
 
 /*Large devices (desktops, 992px and down)*/
 @media (max-width: 992px) {
+
 
 }
 
