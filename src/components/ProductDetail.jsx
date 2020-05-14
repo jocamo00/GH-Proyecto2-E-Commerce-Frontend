@@ -1,23 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react'
+import axios from "axios";
 import { Button } from 'react-bootstrap';
 
-const ProductDetail = () => {
-    return ( 
 
-        <div className="container-fluid container-product-detail">
+export default class ProductDetail extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            product: {}
+        }
+    }
+    componentDidMount() {
+        const { _id } = this.props.match.params;//extraemos el parámetro _id de la ruta
+        axios.get('http://localhost:3300/api/products/' + _id)//hacemos la petición para obtener ese producto en detalle
+            .then(res => this.setState({ product: res.data }))//actualizamos el estado acorde a la respuesta del servi
+    }
+    render() {
+        return (
+            <div className="container-fluid container-product-detail">
             <div className="row container-card">
-                <img className="img col-12 col-md-6 col-lg-5" src="https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-caracteristicas.jpg" alt="" fluid/>
+                <img className="img col-12 col-md-6 col-lg-5" src={this.state.product.imgUrl} alt="" fluid/>
                 <div className="info col-12 col-md-6 col-lg-5">
-                    <p className="title"><b>Lenovo IdeaPad S145-15IILIntel Core i5-1035G1/8 GB/512GB SSD/15.6"</b></p>
+                    <p className="title"><b>{this.state.product.brand}&nbsp;
+                    {this.state.product.model}
+                    {this.state.product.processor}/&nbsp;
+                    {this.state.product.memory}/&nbsp;
+                    {this.state.product.hardDisk}
+                    {this.state.product.sizeMonitor}</b></p>
+                    
                     <div className="info-price">
-                        <p className="price"><b>800</b><span>€</span></p>
-                        <p className="stock">2 <span>unid.</span></p>
+                        <p className="price"><b>{this.state.product.price}</b><span>€</span></p>
+                        <p className="stock">{this.state.product.stock} <span>unid.</span></p>
                     </div>
-                    <p className="description">Con procesadores Intel Core de 10.ª generación, 
-                    el IdeaPad S145 se ha diseñado para seguirte el ritmo, independientemente de la tarea. 
-                    También incluye una gama de opciones de almacenamiento seguras, 
-                    como una unidad SSD híbrida con unidad de disco duro, 
-                    lo que garantiza tiempos de respuesta incluso más rápidos.</p>
+                    <p className="description">{this.state.product.description}</p>
                     <div className="row btn-buy">
                         <Button variant="outline-secondary">Add Cart</Button>
                         <Button variant="outline-secondary">Take Cart</Button>
@@ -25,8 +40,6 @@ const ProductDetail = () => {
                 </div>
             </div>
         </div>
-        
-     );
+        )
+    }
 }
- 
-export default ProductDetail;

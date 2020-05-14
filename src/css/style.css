@@ -1,3 +1,10 @@
+/***** ESTILOS GENERALES *****/
+a {
+    all: unset;
+}
+/***** FIN ESTILOS GENERALES *****/
+
+
 /****** COMPONENTE HEADER *****/
 /* Cabecera */
 .container-cabecera {
