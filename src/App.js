@@ -1,14 +1,14 @@
  
 import React, { Fragment, useState, useEffect } from 'react';
 import axios from 'axios';
-//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
-//import Login from './components/Login';
-//import SignUp from './components/SignUp';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
 import NewProducts from './components/NewProducts';
-//import SearchResults from './components/SearchResults';
-//import ProductDetail from './components/ProductDetail';
-//import Cart from './components/Cart';
+import SearchResults from './components/SearchResults';
+import ProductDetail from './components/ProductDetail';
+import Cart from './components/Cart';
 import Footer from './components/Footer';
 
 
@@ -40,31 +40,20 @@ function App() {
 
   return (
 
-      /*<Router>
-        <Switch>
-          <Route exact path="/" component={NewProducts} />
-          <Route exact path="/" component={Header} />
-          <Route exact path="/lo<SearchResults 
-            product={product}
-          />gin" component={Login} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/search-results" component={SearchResults} />
-          <Route exact path="/product-detail" component={ProductDetail} />
-          <Route exact path="/cart" component={Cart} />
-        </Switch>
-      </Router>*/
-
-      <Fragment>
-          <Header 
-            setSearchProduct={setSearchProduct}
-          />
-          {/*<SearchResults 
-            product={product}
-          />*/}
-          <NewProducts />
+      <div className="App">
+        <BrowserRouter>
+          <Header setSearchProduct={setSearchProduct} />
+          <Switch>
+            <Route path="/" component={NewProducts} exact/>
+            <Route path="/signup" component={SignUp} exact/>
+            <Route path="/login" component={Login} exact/>
+            <Route path="/product-detail/:_id" component={ProductDetail} exact/>
+            <Route path="/search-result" component={SearchResults} exact/>
+            <Route path="/cart" component={Cart} exact/>
+          </Switch>
           <Footer />
-      </Fragment>
-
+        </BrowserRouter>
+      </div>
   );
 }
 

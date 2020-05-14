@@ -70,6 +70,11 @@
 
 .marca {
     margin-right  :  0.5rem;
+    font-size  :  calc(0.5em + 0.5vw);
+}
+
+.modelo {
+    font-size  :  calc(0.5em + 0.5vw);
 }
 
 .precio {

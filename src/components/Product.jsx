@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Product = ({product}) => {
     return ( 
-        <div className="container-producto col-sm-6 col-lg-4 col-xl-3" key={product._id}>
+        <Link className="container-producto col-sm-6 col-lg-4 col-xl-3" key={product._id} to={'/product/>'+product._id}>
             <img class="d-block w-100" src={product.imgUrl} alt=""/>
             <div class="contenedor-info">
                 <div class="contenedorMarca">
@@ -17,8 +18,8 @@ const Product = ({product}) => {
                 </div>
                 <p class="precio">{product.price}<span>€</span></p> 
             </div>
-        </div>
-     );
+        </Link>
+     )
 }
  
 export default Product;
