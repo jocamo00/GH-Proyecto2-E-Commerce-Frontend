@@ -12,7 +12,7 @@ export default class ProductDetail extends Component {
     }
     componentDidMount() {
         const { _id } = this.props.match.params;//extraemos el parámetro _id de la ruta
-        axios.get('http://localhost:3300/api/products/' + _id)//hacemos la petición para obtener ese producto en detalle
+        axios.get('http://localhost:3400/api/products/' + _id)//hacemos la petición para obtener ese producto en detalle
             .then(res => this.setState({ product: res.data }))//actualizamos el estado acorde a la respuesta del servi
     }
     render() {
@@ -21,8 +21,8 @@ export default class ProductDetail extends Component {
             <div className="row container-card">
                 <img className="img col-12 col-md-6 col-lg-5" src={this.state.product.imgUrl} alt="" fluid/>
                 <div className="info col-12 col-md-6 col-lg-5">
-                    <p className="title"><b>{this.state.product.brand}&nbsp;
-                    {this.state.product.model}
+                    <p className="title"><b>{this.state.product.brand}
+                    {this.state.product.model}<br/>
                     {this.state.product.processor}/&nbsp;
                     {this.state.product.memory}/&nbsp;
                     {this.state.product.hardDisk}

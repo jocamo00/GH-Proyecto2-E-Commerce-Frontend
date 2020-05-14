@@ -8,7 +8,7 @@ const NewProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:3300/api/products`)
+        axios.get(`http://localhost:3400/api/products/date/productsnews`)
             .then(res=>setProducts(res.data))
             .catch(console.error)
     },[])
