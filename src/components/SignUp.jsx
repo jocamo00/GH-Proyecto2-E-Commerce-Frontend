@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import signUp from '../img/signup.png';
+import axios from 'axios';
+import { API_URL } from '../api-config';
+import { useHistory } from 'react-router-dom';
 
 
 const SignUp = () => {
@@ -9,13 +11,12 @@ const SignUp = () => {
     const [usuario, guardarUsuario] = useState({
         name:'',
         email:'',
-        password:'',
-        confirm:''
+        password:''
     });
 
 
     // Extraer de usuario
-    const { name, email, password, confirm } = usuario;
+    const { name, email, password } = usuario;
 
 
     // Se ejecutará cada vez que el usuario escriba algo
@@ -28,26 +29,20 @@ const SignUp = () => {
 
 
     // Cuando el usuario quiere iniciar sesión
-    /*const onSubmit = e => {
+    const history = useHistory();
+    const onSubmit = e => {
         e.preventDefault();
 
-        // Validar que no hayan campos vacios
-
-
-        // Password minimo de 6 caracteres
-
-
-        // Los 2 passwords son iguales
-
-
-        // pasarlo al action
-    }*/
+        axios.post(API_URL+'/users/signup', usuario)
+          .then(()=>{ history.push('/login')}) // redireccionamiento usando Hooks
+          .catch(console.error)
+    }
 
     return ( 
 
         // Login
         <div className="container-fluid formulario">
-            <form className="form" id="form">
+            <form className="form" id="form" onSubmit={onSubmit}>
                 <img src={signUp} alt="" className="img-login"/>
                 <h1 className="h3 mb-3 font-weight-bold">Sign Up</h1>
 
@@ -82,25 +77,10 @@ const SignUp = () => {
                           value = {password} 
                        onChange = {onChange} 
                        required
-                />
-
-                <input 
-                           type = "password" 
-                             id = "confirm" 
-                           name = "confirm"
-                      className = "form-control" 
-                    placeholder = "Repeat your password" 
-                          value = {confirm} 
-                       onChange = {onChange} 
-                       required
-                />          
+                />         
         
                 <button type="submit" class="btn btn-outline-secondary btn-style">Register</button>
             </form>
-
-            <Link to = {'/login'}>
-                Volver a iniciar sesión
-            </Link>
         </div> 
         //Fin login
      );

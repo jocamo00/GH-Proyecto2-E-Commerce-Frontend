@@ -1,6 +1,7 @@
  
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_URL} from '../src/api-config';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Login from './components/Login';
@@ -10,6 +11,7 @@ import SearchResults from './components/SearchResults';
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
+
 
 
 
@@ -26,7 +28,7 @@ function App() {
 
     const consultarAPI = async () => {
       const { product } = searchProduct;
-      const url = `http://localhost:3300/api/products/brand/${product}`;
+      const url = API_URL + `/products/brand/${product}`;
 
       const resultado = await axios(url);
 

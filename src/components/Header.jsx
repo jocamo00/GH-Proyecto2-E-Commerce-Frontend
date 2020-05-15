@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import carousel01 from '../img/carousel01.jpg';
 import carousel02 from '../img/carousel02.jpg';
 import carousel03 from '../img/carousel03.jpg';
@@ -46,8 +47,7 @@ const Header = ({setSearchProduct}) => {
             <div className="container-cabecera">
                 {error ? <p className="alert alert-danger text-center p-2">Todos los campos son obligatorios</p> : null }
 
-                <h1 className="txt-encabezado">ipcComponent</h1>
-                <p>Hola<span>Jose</span></p>
+                <h1 className="txt-encabezado">pcShop</h1>
             </div>
 
             {/*Barra de navegación*/}
@@ -60,9 +60,9 @@ const Header = ({setSearchProduct}) => {
                     
                     </Nav>
                     <Nav>
-                    <Nav.Link href="#">close sesion</Nav.Link>
-                    <Nav.Link eventKey={2} href="#memes">
-                        Dank memes
+                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Nav.Link eventKey={2} href="/signup">
+                        SignUp
                     </Nav.Link>
                     </Nav>
                     <Form inline onSubmit={searchInformation}>

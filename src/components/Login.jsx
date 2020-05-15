@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logoLogin from '../img/login.png';
 
 
+
 const Login = () => {
 
     // State para iniciar sesión
@@ -29,9 +30,6 @@ const Login = () => {
     const onSubmit = e => {
         e.preventDefault();
 
-        // Validar que no hayan campos vacios
-
-        // pasarlo al action
     }
 
     return ( 

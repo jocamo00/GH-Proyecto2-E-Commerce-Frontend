@@ -1,4 +1,5 @@
 import React, {useState, useEffect } from 'react';
+import { API_URL } from '../api-config';
 import Product from '../components/Product';
 import axios from 'axios';
 
@@ -8,7 +9,7 @@ const NewProducts = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:3400/api/products/date/productsnews`)
+        axios.get(API_URL + `/products/date/productsnews`)
             .then(res=>setProducts(res.data))
             .catch(console.error)
     },[])
