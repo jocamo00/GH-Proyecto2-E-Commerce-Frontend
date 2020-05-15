@@ -20,7 +20,7 @@ export default class ProductDetail extends Component {
         return (
             <div className="container-fluid container-product-detail">
             <div className="row container-card">
-                <img className="img col-12 col-md-6 col-lg-5" src={this.state.product.imgUrl} alt="" fluid/>
+                <img className="img col-12 col-md-6 col-lg-5" src={this.state.product.imgUrl} alt=""/>
                 <div className="info col-12 col-md-6 col-lg-5">
                     <p className="title"><b>{this.state.product.brand}
                     {this.state.product.model}<br/>

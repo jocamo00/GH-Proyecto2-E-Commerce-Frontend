@@ -22,7 +22,7 @@ const NewProducts = () => {
 
                 {/* Productos */}
                 <div id="productos" className="contenedor-productos row col-12">
-                    {products.map(product=> <Product product={product}/>)}
+                    {products.map(product=> <Product key={product._id} product={product}/>)}
                 </div>
                 {/* Fin productos */}
             </section>

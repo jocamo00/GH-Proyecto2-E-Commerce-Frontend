@@ -1,14 +1,19 @@
-/*import axios from 'axios';
+import axios from 'axios';
+import { API_URL } from '../api-config';
+//import { useHistory } from 'react-router-dom';
+import store from './store';
 
 
+//const history = useHistory();
 export const login = (user) => {
-    axios.post(API_URL + '/api/auths', user)
+    return axios.post(API_URL + '/users/login', user) 
         .then(res => {
             localStorage.setItem('authToken', res.data.token) // guardamos el token en el localStorage
-            notification.succes({
-                message: 'Usuario conectado con éxito'
+            store.dispatch({ // dispatch ejecuta reducer
+                type: 'LOGIN',
+                payload: res.data.user
             });
-            history.pushState('/') //this.router.navigate(['/login']) en angular
+            //history.push('/') // redireccionamiento usando Hooks
         })
-        .catch(console.error)
-}*/
+        
+}

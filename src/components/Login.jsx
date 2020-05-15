@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import logoLogin from '../img/login.png';
-import axios from 'axios';
-import { API_URL } from '../api-config';
+//import axios from 'axios';
+//import { API_URL } from '../api-config';
 import { useHistory } from 'react-router-dom';
+import { login } from '../redux/actions';
 
 
 
@@ -33,13 +34,24 @@ const Login = () => {
     const onSubmit = e => {
         e.preventDefault();
 
-        axios.post(API_URL+'/users/signup', usuario)
+   /*axios.post(API_URL+'/users/login', usuario)
           .then( res => { 
               localStorage.setItem('authToken', res.data.token) // guarda el token en localStorage
-              history.push('/')
-          }) // redireccionamiento usando Hooks
-          .catch(console.error)
+              history.push('/') // redireccionamiento usando Hooks
+          }) 
+          .catch(console.error)*/
+
+           
+          //redux
+          login(usuario)
+            .then(() => {
+                history.push('/')
+            })
+            .catch( error =>{
+                console.error(error)
+            })
     }
+
 
     return ( 
 
@@ -63,7 +75,7 @@ const Login = () => {
                                        onChange={onChange} 
                                        required/>
         
-                <button type="submit" class="btn btn-outline-secondary btn-style" value="Login">Login</button>
+                <button type="submit" className="btn btn-outline-secondary btn-style" value="Login">Login</button>
             </form>
         </div> 
         //Fin login

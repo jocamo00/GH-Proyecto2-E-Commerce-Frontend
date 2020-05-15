@@ -57,8 +57,8 @@ const Header = ({setSearchProduct}) => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="#"></Nav.Link>
                     
                     </Nav>
                     <Nav>
@@ -91,10 +91,6 @@ const Header = ({setSearchProduct}) => {
                     src={carousel01}
                     alt="First slide"
                     />
-                    <Carousel.Caption>
-                    <h3>First</h3>
-                    <p></p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -102,11 +98,6 @@ const Header = ({setSearchProduct}) => {
                     src={carousel02}
                     alt="Third slide"
                     />
-
-                    <Carousel.Caption>
-                    <h3>Second</h3>
-                    <p></p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
@@ -114,11 +105,6 @@ const Header = ({setSearchProduct}) => {
                     src={carousel03}
                     alt="Third slide"
                     />
-
-                    <Carousel.Caption>
-                    <h3>Third</h3>
-                    <p></p>
-                    </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
             /* Fin carousel */}
