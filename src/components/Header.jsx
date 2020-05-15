@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import carousel01 from '../img/carousel01.jpg';
 import carousel02 from '../img/carousel02.jpg';
 import carousel03 from '../img/carousel03.jpg';
@@ -25,6 +25,7 @@ const Header = ({setSearchProduct}) => {
     }
 
     // consultar las apis
+    const history = useHistory();
     const searchInformation = e => {
         e.preventDefault();
 
@@ -37,6 +38,7 @@ const Header = ({setSearchProduct}) => {
         // Todo bien, pasar al componente principal
 
         setSearchProduct(search);
+        history.push('/search-result')
     }
 
 
