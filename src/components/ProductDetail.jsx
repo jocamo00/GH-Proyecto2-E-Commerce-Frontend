@@ -13,7 +13,7 @@ export default class ProductDetail extends Component {
     }
     componentDidMount() {
         const { _id } = this.props.match.params;//extraemos el parámetro _id de la ruta
-        axios.get(API_URL + '/api/products/' + _id)//hacemos la petición para obtener ese producto en detalle
+        axios.get(API_URL + '/products/' + _id)//hacemos la petición para obtener ese producto en detalle
             .then(res => this.setState({ product: res.data }))//actualizamos el estado acorde a la respuesta del servi
     }
     render() {

@@ -1,1 +1,1 @@
-export const API_URL = window.location.href.includes('localhost') ? 'http://localhost:3500' : '';
+export const API_URL = window.location.href.includes('localhost') ? 'http://localhost:3002' : '';
