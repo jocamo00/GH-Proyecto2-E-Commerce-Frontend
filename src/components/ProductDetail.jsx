@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { API_URL } from '../api-config';
 import axios from "axios";
 import { Button } from 'react-bootstrap';
+import { addCart } from '../redux/actions';
+
 
 
 export default class ProductDetail extends Component {
@@ -35,7 +37,7 @@ export default class ProductDetail extends Component {
                     </div>
                     <p className="description">{this.state.product.description}</p>
                     <div className="row btn-buy">
-                        <Button variant="outline-secondary">Add Cart</Button>
+                        <Button variant="outline-secondary" onClick={()=>addCart(this.state.product)}>Add Cart</Button>
                         <Button variant="outline-secondary">Take Cart</Button>
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import store from './store';
 
 
 //const history = useHistory();
-export const login = (user) => {
+/*export const login = (user) => {
     return axios.post(API_URL + '/users/login', user) 
         .then(res => {
             localStorage.setItem('authToken', res.data.token) // guardamos el token en el localStorage
@@ -13,7 +13,24 @@ export const login = (user) => {
                 type: 'LOGIN',
                 payload: res.data.user
             });
-            //history.push('/') // redireccionamiento usando Hooks
+           
         })
         
+}*/
+
+export const login = async (user) => {
+    const res = await axios.post(API_URL + '/users/login', user) 
+        localStorage.setItem('authToken', res.data.token) // guardamos el token en el localStorage
+        store.dispatch({ // dispatch ejecuta reducer
+            type: 'LOGIN',
+            payload: res.data.user
+        });
+}
+
+export const addCart = (product) => {
+
+    store.dispatch({
+        type:'ADD_CART',
+        payload:product
+    })
 }

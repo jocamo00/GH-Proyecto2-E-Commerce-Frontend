@@ -26,123 +26,18 @@ const SearchResults = () => {
                     {/* Productos */}
                     <div id="productos" className="contenedor-productos row col-12">
                         <div className="container-producto col-sm-6 col-lg-4 col-xl-3">
-                            <img class="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
-                            <div class="contenedor-info">
-                                <div class="contenedorMarca">
-                                    <p class="marca">Apple</p>
-                                    <p class="modelo">macBookAir</p>
+                            <img className="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
+                            <div className="contenedor-info">
+                                <div className="contenedorMarca">
+                                    <p className="marca">Apple</p>
+                                    <p className="modelo">macBookAir</p>
                                 </div>
-                                <div class="contenedorProcesador">
-                                    <p class="procesador">i3</p>
-                                    <p class="ram">DDR4 8GB</p>
-                                    <p class="hd">SSD 512GB</p>
+                                <div className="contenedorProcesador">
+                                    <p className="procesador">i3</p>
+                                    <p className="ram">DDR4 8GB</p>
+                                    <p className="hd">SSD 512GB</p>
                                 </div>
-                                <p class="precio">1.500€</p> 
-                            </div>
-                        </div>
-                        <div className="container-producto col-sm-6 col-lg-4 col-xl-3">
-                            <img class="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
-                            <div class="contenedor-info">
-                                <div class="contenedorMarca">
-                                    <p class="marca">Apple</p>
-                                    <p class="modelo">macBookAir</p>
-                                </div>
-                                <div class="contenedorProcesador">
-                                    <p class="procesador">i3</p>
-                                    <p class="ram">DDR4 8GB</p>
-                                    <p class="hd">SSD 512GB</p>
-                                </div>
-                                <p class="precio">1.500€</p> 
-                            </div>
-                        </div>
-                        <div className="container-producto col-sm-6 col-lg-4 col-xl-3">
-                            <img class="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
-                            <div class="contenedor-info">
-                                <div class="contenedorMarca">
-                                    <p class="marca">Apple</p>
-                                    <p class="modelo">macBookAir</p>
-                                </div>
-                                <div class="contenedorProcesador">
-                                    <p class="procesador">i3</p>
-                                    <p class="ram">DDR4 8GB</p>
-                                    <p class="hd">SSD 512GB</p>
-                                </div>
-                                <p class="precio">1.500€</p> 
-                            </div>
-                        </div>
-                        <div className="container-producto col-sm-6 col-lg-4 col-xl-3">
-                            <img class="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
-                            <div class="contenedor-info">
-                                <div class="contenedorMarca">
-                                    <p class="marca">Apple</p>
-                                    <p class="modelo">macBookAir</p>
-                                </div>
-                                <div class="contenedorProcesador">
-                                    <p class="procesador">i3</p>
-                                    <p class="ram">DDR4 8GB</p>
-                                    <p class="hd">SSD 512GB</p>
-                                </div>
-                                <p class="precio">1.500€</p> 
-                            </div>
-                        </div>
-                        <div className="container-producto col-sm-6 col-lg-4 col-xl-3">
-                            <img class="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
-                            <div class="contenedor-info">
-                                <div class="contenedorMarca">
-                                    <p class="marca">Apple</p>
-                                    <p class="modelo">macBookAir</p>
-                                </div>
-                                <div class="contenedorProcesador">
-                                    <p class="procesador">i3</p>
-                                    <p class="ram">DDR4 8GB</p>
-                                    <p class="hd">SSD 512GB</p>
-                                </div>
-                                <p class="precio">1.500€</p> 
-                            </div>
-                        </div>
-                        <div className="container-producto col-sm-6 col-lg-4 col-xl-3">
-                            <img class="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
-                            <div class="contenedor-info">
-                                <div class="contenedorMarca">
-                                    <p class="marca">Apple</p>
-                                    <p class="modelo">macBookAir</p>
-                                </div>
-                                <div class="contenedorProcesador">
-                                    <p class="procesador">i3</p>
-                                    <p class="ram">DDR4 8GB</p>
-                                    <p class="hd">SSD 512GB</p>
-                                </div>
-                                <p class="precio">1.500€</p> 
-                            </div>
-                        </div>
-                        <div className="container-producto col-sm-6 col-lg-4 col-xl-3">
-                            <img class="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
-                            <div class="contenedor-info">
-                                <div class="contenedorMarca">
-                                    <p class="marca">Apple</p>
-                                    <p class="modelo">macBookAir</p>
-                                </div>
-                                <div class="contenedorProcesador">
-                                    <p class="procesador">i3</p>
-                                    <p class="ram">DDR4 8GB</p>
-                                    <p class="hd">SSD 512GB</p>
-                                </div>
-                                <p class="precio">1.500€</p> 
-                            </div>
-                        </div>
-                        <div className="container-producto col-sm-6 col-lg-4 col-xl-3">
-                            <img class="d-block w-100" src='https://thumb.pccomponentes.com/w-530-530/articles/28/280976/lenovo-ideapad-s145-15iil-intel-core-i5-1035g1-8-gb-512gb-ssd-156-review.jpg' alt=""/>
-                            <div class="contenedor-info">
-                                <div class="contenedorMarca">
-                                    <p class="marca">Apple</p>
-                                    <p class="modelo">macBookAir</p>
-                                </div>
-                                <div class="contenedorProcesador">
-                                    <p class="procesador">i3</p>
-                                    <p class="ram">DDR4 8GB</p>
-                                    <p class="hd">SSD 512GB</p>
-                                </div>
-                                <p class="precio">1.500€</p> 
+                                <p className="precio">1.500€</p> 
                             </div>
                         </div>
                     </div>

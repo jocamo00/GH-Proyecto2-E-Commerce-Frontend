@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import signUp from '../img/signup.png';
 import axios from 'axios';
 import { API_URL } from '../api-config';
@@ -6,6 +6,14 @@ import { useHistory } from 'react-router-dom';
 
 
 const SignUp = () => {
+
+    // Para asignar una referencia al elemento html name
+    const nameInput = useRef(null);
+    
+    useEffect(() => {
+      nameInput.current.focus();
+  }, [])
+  
 
     // State para iniciar sesión
     const [usuario, guardarUsuario] = useState({
@@ -54,6 +62,7 @@ const SignUp = () => {
                     placeholder = "Enter your name" 
                           value = {name} 
                        onChange = {onChange} 
+                            ref = {nameInput}
                        required
                 />
 
@@ -79,7 +88,7 @@ const SignUp = () => {
                        required
                 />         
         
-                <button type="submit" class="btn btn-outline-secondary btn-style">Register</button>
+                <button type="submit" className="btn btn-outline-secondary btn-style">Register</button>
             </form>
         </div> 
         //Fin login

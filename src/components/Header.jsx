@@ -4,6 +4,7 @@ import carousel01 from '../img/carousel01.jpg';
 import carousel02 from '../img/carousel02.jpg';
 import carousel03 from '../img/carousel03.jpg';
 import { Nav, Navbar, Carousel, Form, FormControl, Button } from 'react-bootstrap';
+//import { connect } from 'react-redux';
 
 
 const Header = ({setSearchProduct}) => {
@@ -56,6 +57,11 @@ const Header = ({setSearchProduct}) => {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
+                    {/*{ props.user ?
+                        <span>{props.user.email}</span>
+                        :
+                        <span>hola</span>
+                        }*/}
                     <Nav className="mr-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="#"></Nav.Link>
@@ -77,6 +83,7 @@ const Header = ({setSearchProduct}) => {
                             value={product}/>
 
                         <Button variant="outline-secondary" type="submit">Search</Button>
+                        <Button variant="outline-danger">Cart</Button>
                     </Form>
                     
                 </Navbar.Collapse>
@@ -113,4 +120,6 @@ const Header = ({setSearchProduct}) => {
      );
 }
  
+//const mapStateToProps = (state) => ({user:state.user})  // función que recibe el estado de redux, crea una prop user que tenga el state.user
+//export default connect(mapStateToProps)(Header);
 export default Header;
