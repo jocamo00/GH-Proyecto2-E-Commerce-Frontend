@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import logoLogin from '../img/login.png';
+import axios from 'axios';
+import { API_URL } from '../api-config';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -26,10 +28,17 @@ const Login = () => {
     }
 
 
-    // Cuando el usuario quiere iniciar sesión
+    // Iniciar sesión
+    const history = useHistory();
     const onSubmit = e => {
         e.preventDefault();
 
+        axios.post(API_URL+'/users/signup', usuario)
+          .then( res => { 
+              localStorage.setItem('authToken', res.data.token) // guarda el token en localStorage
+              history.push('/')
+          }) // redireccionamiento usando Hooks
+          .catch(console.error)
     }
 
     return ( 
@@ -56,10 +65,6 @@ const Login = () => {
         
                 <button type="submit" class="btn btn-outline-secondary btn-style" value="Login">Login</button>
             </form>
-
-            <Link to = {'/signup'}>
-                Obtener Cuenta
-            </Link>
         </div> 
         //Fin login
      );
