@@ -255,40 +255,97 @@ a {
 
 /****** COMPONENTE CART *****/
 /* Cart */
-.a {
-    background-color: thistle;
+.cart-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+    font-size  :  calc(1.5em + 1.5vw);
+}
+.cart-item {
+    margin-top: 1rem;
 }
 
 .product-cart {
     display: flex;
     margin-left: 0px;
-    background-color: tomato;
 }
 
-.product-ticket {
-    background-color: turquoise;
+.cart-info {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
 }
 
-.img-cart {
-    background-color: yellow;
-}
-
-.title-cart {
-    margin-top: 5rem;
-    height: 8rem;
+.cart-data {
+    text-align: center;
+    align-self: center;
     font-size  :  calc(0.7em + 0.7vw);
-    background-color: yellowgreen;
 }
 
-.price-cart {
-    background-color: wheat;
+.cart-price {
+    text-align: center;
+    align-self: center;
+    font-size  :  calc(0.7em + 0.7vw);
 }
 
-.btn-delete {
-    margin-top: 5rem;
-    height: 2rem;
-    background-color: teal;
+.cart-payment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
 }
+
+.cart-ticket {
+    margin-top: 2rem;
+    align-self: flex-end;
+    padding: 0px;
+}
+
+.cart-total {
+    margin-left: 0px;
+    margin-top: 2rem;
+    padding: 0px;
+}
+
+.cart-logo {
+    color: rgb(57,129,250);
+    text-align: center;
+    font-size  :  calc(2em + 2vw);
+}
+
+.cart-price-data {
+    font-size  :  calc(0.8em + 0.8vw);
+    text-align: start;
+}
+
+.cart-price-total {
+    font-size  :  calc(0.8em + 0.8vw);
+    text-align: end;
+}
+
+.cart-btn {
+    display: flex;
+    direction: row;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.cart-make-order {
+    color: rgb(255, 255, 255);
+    background-color: rgb(57,129,250);
+    text-align: center;
+    padding: 0.6rem;
+}
+
+.cart-delete-order {
+    color: rgb(255, 255, 255);
+    background-color: rgb(220,20,60);
+    text-align: center;
+    padding: 0.6rem;
+}
+
 /* Fin cart */
 /****** FIN COMPONENTE CART *****/
 
@@ -316,6 +373,10 @@ a {
 
     .container-card {
         flex-direction: column;
+    }
+
+    .cart-img {
+        padding: 0px;
     }
 
 }

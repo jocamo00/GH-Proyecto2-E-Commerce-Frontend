@@ -9,7 +9,7 @@ const SearchProducts = ({imagenes}) => {
         // Sección nuevos productos 
         <section className="container-fluid seccion-productos">
                 {/*Filtro resultados*/}
-                <div className="row search-products">
+                {/*<div className="row search-products">
                     <div className="col-sm-6">
                         <Form.Group controlId="exampleForm.SelectCustomSizeLg">
                             <Form.Control as="select" size="lg" custom>
@@ -21,7 +21,7 @@ const SearchProducts = ({imagenes}) => {
                             </Form.Control>
                         </Form.Group>
                     </div>
-                </div>
+                </div>*/}
                 {/* Fin filtro resultados*/}
                 
                 {/* Productos */}
