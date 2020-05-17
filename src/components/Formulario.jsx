@@ -40,8 +40,8 @@ const Formulario = ({setSearch}) => {
                             onChange={ e => setTerm(e.target.value)}
                         />
                     </div>
-                    <div col-2>
-                        <button type="submit" class="btn btn-light">Search</button>
+                    <div>
+                        <button type="submit" className="btn btn-light">Search</button>
                     </div>
                     
                         

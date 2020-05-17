@@ -30,7 +30,7 @@ function App() {
       const respuesta = await fetch(url);
       const resultado = await respuesta.json();
 
-      console.log(resultado);
+      console.log(resultado[0]);
       guardarImagenes(resultado);
     }
 

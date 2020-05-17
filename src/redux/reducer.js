@@ -15,6 +15,12 @@ const reducer = (state = { cart:[]}, action) => { // si en el state no viene nad
                 ...state,
                 cart:[]
             }
+        case 'LOGOUT':
+            return{
+                ...state,
+                user: undefined,
+                cart: []
+            }
     
         default:
             return state;  // estado que devolvemos por defecto

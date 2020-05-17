@@ -42,5 +42,8 @@ export const clearCart = () => {
 }
 
 export const logout = () => {
-
+    localStorage.removeItem('authToken');
+    store.dispatch({
+        type: 'LOGOUT',
+    })
 }

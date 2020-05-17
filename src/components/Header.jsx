@@ -2,11 +2,18 @@ import React from 'react';
 import carousel01 from '../img/carousel01.jpg';
 import carousel02 from '../img/carousel02.jpg';
 import carousel03 from '../img/carousel03.jpg';
+import { useHistory } from 'react-router-dom';
 import { Nav, Navbar, Carousel, Button } from 'react-bootstrap';
 //import { connect } from 'react-redux';
 
 
 const Header = () => {
+
+
+    const history = useHistory();
+    const openCart = () => {
+        history.push('/cart')
+    }
 
     return ( 
         // Cabecera
@@ -19,11 +26,11 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    {/*{ props.user ?
+                    {/* props.user ?
                         <span>{props.user.email}</span>
                         :
                         <span>hola</span>
-                        }*/}
+                        */}
                     <Nav className="mr-auto">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="#"></Nav.Link>
@@ -35,7 +42,7 @@ const Header = () => {
                         SignUp
                     </Nav.Link>
                     </Nav>
-                    <Button variant="outline-danger">Cart</Button>
+                    <Button variant="outline-danger" onClick={() => openCart()}>Cart</Button>
                 </Navbar.Collapse>
             </Navbar>
             {/*Fin barra de navegación*/
