@@ -1,6 +1,5 @@
  
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { API_URL} from '../src/api-config';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -11,40 +10,41 @@ import SearchResults from './components/SearchResults';
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
+import Formulario from './components/Formulario';
+import SearchProducts from './components/SearchProducts';
 
 
 
 
 function App() {
 
-  // Definir el state
-  const [ searchProduct, setSearchProduct ] = useState({});
-  const [ product, setProduct ] = useState('');
-
-
+  const [ search, setSearch] = useState('');
+  const [ imagenes, guardarImagenes ] = useState([]);
   useEffect(() => {
-    // Comprueba si el objeto esta vacio
-    if(Object.keys(searchProduct).length === 0) return;
 
-    const consultarAPI = async () => {
-      const { product } = searchProduct;
-      const url = API_URL + `/products/brand/${product}`;
+    const consultarApi = async() => {
+      if(search === '') return;
+    
+      const url = API_URL + `/products/brand/${search}`;
 
-      const resultado = await axios(url);
+      const respuesta = await fetch(url);
+      const resultado = await respuesta.json();
 
-      console.log(resultado.data);
-      setProduct(resultado.data);
+      console.log(resultado);
+      guardarImagenes(resultado);
     }
-    consultarAPI();
 
-  }, [searchProduct]);
+    consultarApi();
+  }, [search])
   
 
   return (
 
       <div className="App">
         <BrowserRouter>
-          <Header setSearchProduct={setSearchProduct} />
+          <Header />
+          <Formulario setSearch={setSearch}/>
+          <SearchProducts imagenes={imagenes}/>
           <Switch>
             <Route path="/" component={NewProducts} exact/>
             <Route path="/signup" component={SignUp} exact/>

@@ -1,55 +1,17 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
 import carousel01 from '../img/carousel01.jpg';
 import carousel02 from '../img/carousel02.jpg';
 import carousel03 from '../img/carousel03.jpg';
-import { Nav, Navbar, Carousel, Form, FormControl, Button } from 'react-bootstrap';
+import { Nav, Navbar, Carousel, Button } from 'react-bootstrap';
 //import { connect } from 'react-redux';
 
 
-const Header = ({setSearchProduct}) => {
-
-    const [search, setSearch] = useState({
-        product: ''
-    });
-
-    const [ error, setError] = useState(false);
-
-    const { product } = search;
-
-    // función a cada input para leer su contenido
-    const updateState = e => {
-        setSearch({
-            ...search,
-            [e.target.name] : e.target.value
-        })
-    }
-
-    // consultar las apis
-    const history = useHistory();
-    const searchInformation = e => {
-        e.preventDefault();
-
-       if(product.trim() === ''){
-            setError(true);
-            return;
-        }
-
-        setError(false);
-        // Todo bien, pasar al componente principal
-
-        setSearchProduct(search);
-        history.push('/search-result')
-    }
-
+const Header = () => {
 
     return ( 
         // Cabecera
         <header className="container-fluid">
-
             <div className="container-cabecera">
-                {error ? <p className="alert alert-danger text-center p-2">Todos los campos son obligatorios</p> : null }
-
                 <h1 className="txt-encabezado">pcShop</h1>
             </div>
 
@@ -73,19 +35,7 @@ const Header = ({setSearchProduct}) => {
                         SignUp
                     </Nav.Link>
                     </Nav>
-                    <Form inline onSubmit={searchInformation}>
-                        <FormControl 
-                            type="text" 
-                            name="product" 
-                            placeholder="Search" 
-                            className="mr-sm-2" 
-                            onChange={updateState} 
-                            value={product}/>
-
-                        <Button variant="outline-secondary" type="submit">Search</Button>
-                        <Button variant="outline-danger">Cart</Button>
-                    </Form>
-                    
+                    <Button variant="outline-danger">Cart</Button>
                 </Navbar.Collapse>
             </Navbar>
             {/*Fin barra de navegación*/

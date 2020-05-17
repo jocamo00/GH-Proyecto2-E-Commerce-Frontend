@@ -24,6 +24,17 @@ a {
 /****** FIN COMPONENTE HEADER *****/
 
 
+/****** COMPONENTE FORMULARIO *****/
+.container-search {
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(38,38,38);
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+/****** FIN COMPONENTE FORMULARIO *****/
+
+
 /****** COMPONENTE NEWPRODUCTS *****/
 /* contenido productos*/
 .contenedor-productos {

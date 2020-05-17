@@ -13,7 +13,7 @@ const Login = () => {
     const emailInput = useRef(null);
     
     useEffect(() => {
-        emailInput.current.focus();
+        emailInput.current.focus();  // Poner el foco en el input
     }, [])
     
     // State para iniciar sesión

@@ -10,6 +10,11 @@ const reducer = (state = { cart:[]}, action) => { // si en el state no viene nad
                 ...state, 
                 cart: [...state.cart, action.payload]
             }
+        case 'CLEAR_CART':
+            return {
+                ...state,
+                cart:[]
+            }
     
         default:
             return state;  // estado que devolvemos por defecto

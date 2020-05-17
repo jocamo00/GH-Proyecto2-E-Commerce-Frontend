@@ -34,3 +34,13 @@ export const addCart = (product) => {
         payload:product
     })
 }
+
+export const clearCart = () => {
+    store.dispatch({
+        type: 'CLEAN_CART'
+    })
+}
+
+export const logout = () => {
+
+}
