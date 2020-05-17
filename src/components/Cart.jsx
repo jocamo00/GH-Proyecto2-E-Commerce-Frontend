@@ -2,9 +2,17 @@
 import React from 'react'
 import { connect } from "react-redux";
 import { Image } from 'react-bootstrap';
+import { clearCart } from '../redux/actions';
+import { useHistory } from 'react-router-dom';
 
 
 const Cart = (props) => {
+
+    const history = useHistory();
+    const returnHome = () => {
+        history.push('/')
+    }
+
     return ( 
 
         <div className="container-fluid a">
@@ -35,15 +43,18 @@ const Cart = (props) => {
                                     <div>TOTAL:</div>
                             </div>
                             <div className="cart-price-total col-6">
-                                <div>priceTotal<span>€</span></div>
+                                <div>000<span>€</span></div>
                             </div>
                         </div>
                         <div className="row cart-btn container-fluid">
-                            <div className="cart-make-order col-12 col-md-6 col-lg-8">
-                                <div>MAKE ORDER</div>
+                            <div className="cart-make-order col-12 col-md-4 col-lg-6">
+                                <button type="button" class="btn btn-outline-secondary">Make Order</button>
                             </div>
-                            <div className="cart-delete-order col-12 col-md-6 col-lg-4">
-                                <div>DELETE ORDER</div>
+                            <div className="cart-delete-order col-12 col-md-4 col-lg-3">
+                                <button type="button" class="btn btn-outline-danger" onClick={() => clearCart()}>Clear Cart</button>
+                            </div>
+                            <div className="cart-delete-order col-12 col-md-4 col-lg-3">
+                                <button type="button" class="btn btn-outline-secondary" onClick={() => returnHome()}>Home</button>
                             </div>
                         </div>
                 </div>
@@ -56,18 +67,5 @@ const Cart = (props) => {
 const mapStateToProps = (state) => ({ ...state })
 export default connect(mapStateToProps)(Cart);
 
-
-
-
-/*<div className="container-fluid a">
-{props.cart.map(product =>
-                       <tr>
-                           <td>{product.brand}</td>
-                           <td>{product.model}</td>
-                           <td>{product.memory}</td>
-                           <td>{product.price}€</td>
-                       </tr>
-                   )}
-</div>*/
 
 

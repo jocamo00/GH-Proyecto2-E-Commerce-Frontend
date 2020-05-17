@@ -7,6 +7,9 @@ import { addCart } from '../redux/actions';
 
 
 export default class ProductDetail extends Component {
+
+   
+
     constructor(props) {
         super(props);
         this.state = {
@@ -19,6 +22,7 @@ export default class ProductDetail extends Component {
             .then(res => this.setState({ product: res.data }))//actualizamos el estado acorde a la respuesta del servi
     }
     render() {
+
         return (
             <div className="container-fluid container-product-detail">
             <div className="row container-card">
@@ -38,7 +42,6 @@ export default class ProductDetail extends Component {
                     <p className="description">{this.state.product.description}</p>
                     <div className="row btn-buy">
                         <Button variant="outline-secondary" onClick={()=>addCart(this.state.product)}>Add Cart</Button>
-                        <Button variant="outline-secondary">Take Cart</Button>
                     </div>
                 </div>
             </div>

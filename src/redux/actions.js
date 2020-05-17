@@ -37,7 +37,7 @@ export const addCart = (product) => {
 
 export const clearCart = () => {
     store.dispatch({
-        type: 'CLEAN_CART'
+        type: 'CLEAR_CART'
     })
 }
 
